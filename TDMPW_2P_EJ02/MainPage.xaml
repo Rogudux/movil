@@ -60,7 +60,7 @@
             />
         </Frame>
         <Label
-            Text="USO DE SLIDERS  Y CONTROLADORES"
+            Text="USO DE SLIDERS  Y CONTRODORES"
             x:Name ="txtRotate"
             HorizontalOptions ="Center"
             VerticalOptions ="Center"
