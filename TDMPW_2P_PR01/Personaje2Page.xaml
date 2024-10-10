@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TDMPW_2P_PR01.Personaje2Page"
+             Title="Personaje2Page">
+        <ContentPage.Content>
+        <Frame 
+            CornerRadius="30"
+            BorderColor="DarkBlue"
+            HasShadow="True"
+            Padding="20"
+            Margin="20"
+            BackgroundColor="LightBlue"
+            >
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*" />
+                    <ColumnDefinition Width="3*" />
+                </Grid.ColumnDefinitions>
+
+                <Image
+                    Source="azul.png"
+                    WidthRequest="200"
+                    HeightRequest="200"
+                    Aspect="AspectFit"
+                    Grid.Row="0"
+                    Grid.Column="0"
+                    VerticalOptions="Center">
+                    <Image.Clip>
+                        <EllipseGeometry
+                            Center="100,100"
+                            RadiusX="100"
+                            RadiusY="100" />
+                    </Image.Clip>
+                </Image>
+
+                <!-- Name of the Character -->
+                <Label
+                    Text="GEO"
+                    FontSize="Large"
+                    FontAttributes="Bold"
+                    HorizontalOptions="Start"
+                    VerticalOptions="Center"
+                    TextColor="Black"
+                    Grid.Row="0"
+                    Grid.Column="1" />
+
+                <!-- Line under the name -->
+                <BoxView
+                    HeightRequest="2"
+                    Color="Black"
+                    HorizontalOptions="Start"
+                    VerticalOptions="Start"
+                    WidthRequest="100"
+                    Grid.Row="1"
+                    Grid.Column="1" />
+
+                <!-- Character Biography -->
+                <Label
+                    Text="Geo es un personaje de la serie de televisión para niños Equipo Umizoomi. Geo es un experto en formas y construcción, y es uno de los miembros del equipo que resuelve problemas en Ciudad Umi usando sus habilidades matemáticas: 
+Geo es el experto en formas y el constructor maestro del equipo Umizoomi. Con su cinturón de formas y sus planos, puede construir cualquier cosa. Al cantar “Super Shapes!”, convierte formas simples en poderosos vehículos en 3D.
+"
+                    FontSize="Medium"
+                    HorizontalOptions="Start"
+                    VerticalOptions="Start"
+                    TextColor="Black"
+                    Grid.Row="2"
+                    Grid.Column="0"
+                    Grid.ColumnSpan="2" />
+            </Grid>
+
+        </Frame>
+    
+    </ContentPage.Content>
+</ContentPage>

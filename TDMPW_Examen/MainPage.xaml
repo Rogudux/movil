@@ -1,0 +1,346 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TDMPW_Examen.MainPage">
+
+    <ContentPage Title="Inicio" IconImageSource="home.png">
+            <Grid BackgroundColor="White">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+
+                <Label 
+                        Text="BIENVENIDO A SU CALCULADORA DE WATTS"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        FontSize="Header"
+                        FontAttributes="Bold"
+                        Grid.Column="0"
+                        Grid.Row="0"
+                        Grid.ColumnSpan="3"
+                        TextColor="Black"
+                    />
+                
+                    <Label
+                        Text="TE DAMOS LA BIENVENIDA"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        FontSize="Large"    
+                        Grid.Column="0"
+                        Grid.Row="1"
+                        Grid.ColumnSpan="3"
+                        TextColor="Black"
+                    />
+
+                    <Image
+                        Source="wattsini.png"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        Grid.Column="0"
+                        Grid.Row="2"
+                        Aspect="AspectFit"
+                        HeightRequest="300"
+                        WidthRequest="300"
+                    >
+                        <Image.Clip>
+
+                            <EllipseGeometry
+                                Center="150,150"
+                                RadiusX="150"
+                                RadiusY="150"
+                            />
+                    
+                        </Image.Clip>
+
+                    </Image>
+
+                    <Image
+                        Source="joules.png"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        Grid.Column="1"
+                        Grid.Row="2"
+                        Aspect="AspectFit"
+                        HeightRequest="300"
+                        WidthRequest="300"
+                    >
+                        <Image.Clip>
+
+                            <EllipseGeometry
+                                Center="150,150"
+                                RadiusX="150"
+                                RadiusY="150"
+                            />
+                    
+                        </Image.Clip>
+                    </Image>
+            </Grid>       
+    </ContentPage>
+
+
+    <ContentPage Title="Watts" IconImageSource="logowat.png">
+                       <Grid BackgroundColor="White">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <BoxView
+                    Grid.Column="0"
+                    Grid.Row="0"
+                    Grid.ColumnSpan="3"
+                    Background="#f1ac0c">
+                </BoxView>
+
+                    <Label 
+                        Text="Watts"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        FontSize="Header"
+                        FontAttributes="Bold"
+                        Grid.Column="0"
+                        Grid.Row="0"
+                        Grid.ColumnSpan="3"
+                        TextColor="White"
+                    />
+                
+                    <Label
+                        Text="Ingrese tus amperios"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        FontSize="Large"    
+                        Grid.Column="0"
+                        Grid.Row="1"
+                        TextColor="Black"
+                    />
+
+                    <Entry
+                        x:Name="ampeEntry"
+                        Placeholder="Ingresa amperios"
+                        PlaceholderColor="White"
+                        Grid.Column="1"
+                        Grid.Row="1"
+                        Background="#f1ac0c"
+                        WidthRequest="400"
+                        HeightRequest="20"
+                    />
+
+                    <Image
+                        Source="watts.png"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        Grid.Column="3"
+                        Grid.Row="1"
+                        HeightRequest="100"
+                        WidthRequest="150"
+                    />
+
+                    <Label
+                        Text="Ingrese tus voltios"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        FontSize="Large"    
+                        Grid.Column="0"
+                        Grid.Row="2"
+                        TextColor="Black"
+                    />
+
+                    <Entry
+                        x:Name="voltEntry"
+                        Placeholder="Ingresa voltios"
+                        PlaceholderColor="White"
+                        Grid.Column="1"
+                        Grid.Row="2"
+                        Background="#f1ac0c"
+                        WidthRequest="400"
+                        HeightRequest="20"
+                    />
+
+                    <Image
+                        Source="voltio.png"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        Grid.Column="2"
+                        Grid.Row="2"
+                        HeightRequest="100"
+                        WidthRequest="150"
+                    />
+
+
+
+                    <Button
+                        Text="CALCULAR"
+                        Background="#f1ac0c"
+                        Grid.Column="0"
+                        Grid.Row="3"
+                        Grid.ColumnSpan="3"
+                        WidthRequest="800"
+                        HeightRequest="30"
+                        FontAttributes="Bold"
+                        TextColor="White"
+                        Clicked="conveWatts"
+                    />
+
+                    <Label
+                        x:Name="resultadoWatts"
+                        Text=""
+                        HorizontalOptions="Center"
+                        VerticalOptions="Start"
+                        FontSize="Medium"    
+                        Grid.Column="0"
+                        Grid.Row="4"
+                        Grid.ColumnSpan="3"
+                        TextColor="Black"
+                    />
+            </Grid>
+    </ContentPage>
+        <ContentPage Title="Watts Ind" IconImageSource="logowatindu.png">
+                       <Grid BackgroundColor="White">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <BoxView
+                    Grid.Column="0"
+                    Grid.Row="0"
+                    Grid.ColumnSpan="3"
+                    Background="#46b22f">
+                </BoxView>
+
+                    <Label 
+                        Text="Watts Industriales"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        FontSize="Header"
+                        FontAttributes="Bold"
+                        Grid.Column="0"
+                        Grid.Row="0"
+                        Grid.ColumnSpan="3"
+                        TextColor="White"
+                    />
+                
+                    <Label
+                        Text="Ingrese tus joules"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        FontSize="Large"    
+                        Grid.Column="0"
+                        Grid.Row="1"
+                        TextColor="Black"
+                    />
+
+                    <Entry
+                        x:Name="ampeIndEntry"
+                        Placeholder="Ingresa joules"
+                        PlaceholderColor="White"
+                        Grid.Column="1"
+                        Grid.Row="1"
+                        Background="#46b22f"
+                        WidthRequest="400"
+                        HeightRequest="20"
+                    />
+
+                    <Image
+                        Source="jouless.png"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        Grid.Column="3"
+                        Grid.Row="1"
+                        HeightRequest="100"
+                        WidthRequest="150"
+                    />
+
+                    <Label
+                        Text="Ingresa tu tiempo (s)"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        FontSize="Large"    
+                        Grid.Column="0"
+                        Grid.Row="2"
+                        TextColor="Black"
+                    />
+
+                    <Entry
+                        x:Name="voltIndEntry"
+                        Placeholder="Ingresa segundos"
+                        PlaceholderColor="White"
+                        Grid.Column="1"
+                        Grid.Row="2"
+                        Background="#46b22f"
+                        WidthRequest="400"
+                        HeightRequest="20"
+                    />
+
+                    <Image
+                        Source="tiempo.png"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        Grid.Column="2"
+                        Grid.Row="2"
+                        HeightRequest="100"
+                        WidthRequest="150"
+                    />
+
+
+
+                    <Button
+                        Text="CALCULAR"
+                        Background="#46b22f"
+                        Grid.Column="0"
+                        Grid.Row="3"
+                        Grid.ColumnSpan="3"
+                        WidthRequest="800"
+                        HeightRequest="30"
+                        FontAttributes="Bold"
+                        TextColor="White"
+                        Clicked="conveWattsInd"
+                    />
+
+                    <Label
+                        x:Name="resultadoWattInd"
+                        Text=""
+                        HorizontalOptions="Center"
+                        VerticalOptions="Start"
+                        FontSize="Medium"    
+                        Grid.Column="0"
+                        Grid.Row="4"
+                        Grid.ColumnSpan="3"
+                        TextColor="Black"
+                    />
+            </Grid>
+    </ContentPage>
+
+
+</TabbedPage>

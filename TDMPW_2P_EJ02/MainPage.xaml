@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TDMPW_2P_EJ02.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+            <Image
+                Source="dotnet_bot.png"
+                HeightRequest="185"
+                Aspect="AspectFit"
+                SemanticProperties.Description="dot net bot in a race car number eight" />
+
+            <Label
+                Text="EJERCICIO 2"
+                Style="{StaticResource Headline}"
+                SemanticProperties.HeadingLevel="Level1" />
+
+            <Label
+                Text="SEGUNDO PARCIAL"
+                Style="{StaticResource SubHeadline}"
+                SemanticProperties.HeadingLevel="Level2"
+                SemanticProperties.Description="Welcome to dot net Multi platform App U I" />
+
+        <HorizontalStackLayout Spacing="10">
+            <Label
+                Text="..."
+                x:Name="txtSld" />
+            <Slider
+                x:Name="sldPrincipal"
+                Maximum="100"
+                Minimum="1"
+                Value="10"
+                WidthRequest="200"
+                ThumbColor="Black"
+                MinimumTrackColor="Blue"
+                MaximumTrackColor="Red" 
+                ValueChanged="OnSldChange"
+                Background="AliceBlue"
+                />
+        </HorizontalStackLayout>
+
+        <Frame
+            CornerRadius ="10"
+            IsClippedToBounds="True"
+            Padding="1">
+
+            <Slider
+                Minimum="1"
+                Maximum="360"
+                Value="0"
+                BackgroundColor ="Green"
+                ThumbColor="Beige"
+                x:Name="sldRotatate"
+                MaximumTrackColor="Purple"
+                MinimumTrackColor="Grey"
+                ValueChanged="OnSldRotate"
+            />
+        </Frame>
+        <Label
+            Text="USO DE SLIDERS  Y CONTROLADORES"
+            x:Name ="txtRotate"
+            HorizontalOptions ="Center"
+            VerticalOptions ="Center"
+        />
+
+         <HorizontalStackLayout Spacing="10" Margin="20">
+            <Label
+                Text="..."
+                x:Name="txtSldF" />
+            <Slider
+                x:Name="sldF"
+                Maximum="100"
+                Minimum="1"
+                Value="10"
+                WidthRequest="200"
+                ThumbColor="Black"
+                MinimumTrackColor="Blue"
+                MaximumTrackColor="Red" 
+                ValueChanged="OnSldChangeF"
+                />
+        </HorizontalStackLayout>
+        <Label
+            Text="Cambio de propiedades"
+            x:Name ="txtSldF2"
+        />
+
+        <Stepper
+            Minimum="0"
+            Maximum="10"
+            Increment="1"
+            ValueChanged="OnStp"
+            x:Name ="stepper"
+        />
+        <Label
+            x:Name ="Stp"
+            Text="txtStepper"    
+        />
+
+
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+
+
+</ContentPage>

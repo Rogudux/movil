@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TDMPW_2P_EJ01.InstalacionesPage"
+             Title="InstalacionesPage">
+<ScrollView>
+    <VerticalStackLayout>
+        <Label 
+            Text="Nuestras instalaciones"
+            FontSize="Header"
+            FontAttributes="Bold"
+            
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"
+        />
+
+        <Image
+            Source="instalaciones.jpg"
+            WidthRequest="300"
+            HeightRequest="300"
+            HorizontalOptions="Center"
+            VerticalOptions="Center"    
+        />
+
+        <Label
+            Text="Contamos con bellas instalaciones"
+            HorizontalOptions="Center"
+            FontSize="Caption"
+        />
+
+        <Label
+            Text="Toma el reto de subir y bajar por todo el Campus"
+            FontSize="Body"
+            Margin="30"
+            HorizontalOptions="Center"
+            VerticalOptions="Center"
+            FontAttributes="Bold"
+        />
+
+        <VerticalStackLayout
+            Padding="20"
+            VerticalOptions="CenterAndExpand"
+        >
+            <Frame 
+            CornerRadius="15"
+            BorderColor="LightGray"
+            HasShadow="True"
+            Padding="10"
+            Margin="10"
+            >
+                <StackLayout 
+                Spacing="10"
+                
+                >
+                    <Image 
+                        Source="dotnet_bot.png"
+                        WidthRequest="200"
+                        HeightRequest="200"
+                        Aspect="AspectFit"
+                    />
+                    <Label
+                        Text="TITULO DEL CARD"
+                        FontSize="Large"
+                        FontAttributes="Bold"
+                        HorizontalOptions="Center"
+                    />
+                    <BoxView
+                        Color="LightGray"
+                        HeightRequest="1"
+                    />
+                    <Label
+                        Text="Cotenido del card"
+                        FontSize="Small"
+                        HorizontalOptions="Center"
+                    />
+                </StackLayout>
+            </Frame>
+        </VerticalStackLayout>
+        
+    </VerticalStackLayout>
+</ScrollView>
+</ContentPage>

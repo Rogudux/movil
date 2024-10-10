@@ -1,0 +1,159 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TDMPW_1P_PR02.MainPage">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+    
+
+        <BoxView
+            Color="#26619C"
+            Grid.Column="0"
+            Grid.Row="0"
+            Grid.ColumnSpan="3"
+
+        />
+        <Label
+            Text="CÁLCULO DE IVA"
+            HorizontalOptions="Center"
+            VerticalOptions="Center"
+            TextColor="White"
+            Grid.Column="0"
+            Grid.Row="0"
+            Grid.ColumnSpan="3"
+            FontSize="Header"
+        />
+
+         <BoxView
+            Color="White"
+            Grid.Column="0"
+            Grid.Row="1"
+            Grid.ColumnSpan="3"
+        />
+
+
+        <Label
+            Text="Ingrese el monto
+            "
+            HorizontalOptions="End"
+            VerticalOptions="Center"
+            TextColor="Black"
+            Grid.Column="0"
+            Grid.Row="1"
+            FontSize="Medium"
+            FontAttributes="Bold"
+        />
+
+        <BoxView
+            Color="White"
+            Grid.Column="0"
+            Grid.Row="2"
+            Grid.ColumnSpan="3"
+        />
+
+        <Label
+            Text="Seleccione la tasa"
+            HorizontalOptions="End"
+            VerticalOptions="Center"
+            TextColor="Black"
+            Grid.Column="0"
+            Grid.Row="2"
+            FontSize="Medium"
+            FontAttributes="Bold"
+        />
+
+        <Entry
+            x:Name="montoEntry"
+            Keyboard="Numeric"
+            Placeholder="Monto"
+            WidthRequest="650"
+            HeightRequest="20"
+            HorizontalOptions="Center"
+            Margin="10"
+            BackgroundColor="#26619C"
+            Grid.Column="1"
+            Grid.Row="1"
+            Grid.ColumnSpan="2"
+        />
+        
+
+        <Entry
+            x:Name="tasaEntry"
+            Keyboard="Numeric"
+            Placeholder="Tasa de IVA (%)"
+            WidthRequest="650"
+            HeightRequest="20"
+            HorizontalOptions="Center"
+            Margin="10"
+            BackgroundColor="#26619C"
+            Grid.Column="1"
+            Grid.Row="2"
+            Grid.ColumnSpan="2"
+        />
+
+        <BoxView
+            Color="AliceBlue"
+            Grid.Column="0"
+            Grid.Row="3"
+            Grid.ColumnSpan="3"
+        />
+
+        <Button
+            x:Name="calcularButton"
+            Clicked="OnCalcularButtonClicked"
+            Text="CALCULAR" 
+            TextColor="AliceBlue" 
+            BackgroundColor="#26619C"
+            Margin="2"
+            Grid.Column="0"
+            Grid.Row="3"
+            Grid.ColumnSpan="3"
+            HeightRequest="60"
+            FontSize="Medium"
+            FontAttributes="Bold"
+        />
+
+        <BoxView
+            Color="white"
+            Grid.Column="0"
+            Grid.Row="4"
+            Grid.ColumnSpan="3"
+        />
+
+<Image
+    Source="iva.png"
+    WidthRequest="100"
+    HeightRequest="100"
+    Grid.Column="0"
+    Grid.Row="4"
+    Aspect="AspectFill"                                                                                                                                                                                                                                                                                                                 
+/>
+
+
+        <Label
+            x:Name="resultadoLabel"
+            Text="RESULTADO"
+            HorizontalOptions="Center"
+            VerticalOptions="Center"
+            TextColor="Black"
+            Grid.Column="1"
+            Grid.Row="4"
+            FontSize="Micro"
+            FontAttributes="Bold"
+        />
+    </Grid>
+
+</ContentPage>

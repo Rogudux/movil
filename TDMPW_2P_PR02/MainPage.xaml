@@ -1,0 +1,457 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TDMPW_2P_PR02.MainPage">
+
+
+<ContentPage Title="Inicio" IconImageSource="home.png" BackgroundColor="#ec6a10">
+
+    <ScrollView>
+
+        <VerticalStackLayout>
+            <Frame
+                
+                BorderColor="black"
+            Padding="10"  
+            Margin="10"
+            >
+
+                <Grid BackgroundColor="#ec6a10">
+
+                    <VerticalStackLayout>
+
+                        <BoxView
+                    HeightRequest="200"
+                    Color="Transparent"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"
+                    WidthRequest="400"
+                        />
+                        
+                        <Image
+                        Source="logo2.png"
+                        WidthRequest="200"
+                        HeightRequest="200"
+                        Aspect="AspectFit"
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        VerticalOptions="Center">
+                        <Image.Clip>
+                            <EllipseGeometry
+                                Center="100,100"
+                                RadiusX="100"
+                                RadiusY="100" />
+                        </Image.Clip>
+                    </Image>
+
+                    <BoxView
+                    HeightRequest="4"
+                    Color="Black"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"
+                    WidthRequest="400"
+                />
+
+
+                <Label 
+                    Text="HOBBIES"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"
+                    FontSize="Header"
+                    FontAttributes="Bold"
+                    TextColor="White"
+                    Grid.Row="0"
+                    Grid.Column="2" 
+                /> 
+
+                <BoxView
+                    HeightRequest="300"
+                    Color="Transparent"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"
+                    WidthRequest="400"
+                />
+                        
+                    </VerticalStackLayout>
+                    
+                </Grid>
+            </Frame>
+        </VerticalStackLayout>
+    </ScrollView>
+
+
+</ContentPage>
+
+
+<ContentPage Title="Hobbie" IconImageSource="logo.png"  BackgroundColor="#ec6a10">
+    <ScrollView>
+        <VerticalStackLayout>
+        <Frame 
+            BorderColor="black"
+            Padding="10"  
+            Margin="10"
+            >
+            <Grid BackgroundColor="#ec6a10">
+
+
+            <VerticalStackLayout>
+                <Label 
+                    Text="NOMBRE"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"
+                    FontSize="Header"
+                    FontAttributes="Bold"
+                    TextColor="White"
+                    Grid.Row="0"
+                    Grid.Column="2" 
+                /> 
+
+                <BoxView
+                    HeightRequest="4"
+                    Color="Black"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"
+                    WidthRequest="200"
+                />
+
+                 <Label 
+                    Padding="20"
+                    Text="HOBBIES"
+                    HorizontalOptions="Start"
+                    VerticalOptions="Center"
+                    FontSize="Large"
+                    FontAttributes="None"
+                    TextColor="White"
+                /> 
+
+                <HorizontalStackLayout>
+
+                    <Image
+                        Source="nadar.png"
+                        WidthRequest="80"
+                        HeightRequest="80"
+                        Aspect="AspectFit"
+                        HorizontalOptions="Start"
+                        VerticalOptions="Center"
+                        Margin="20"
+                    />
+
+                    <Label 
+                        Padding="20"
+                        Text="NADAR"
+                        HorizontalOptions="Start"
+                        VerticalOptions="Center"
+                        FontSize="Medium"
+                        FontAttributes="None"
+                        TextColor="White"
+                    /> 
+
+                </HorizontalStackLayout>
+
+                
+                <HorizontalStackLayout>
+                    <Image
+                        Source="basquet.png"
+                        WidthRequest="80"
+                        HeightRequest="80"
+                        Aspect="AspectFit"
+                        HorizontalOptions="Start"
+                        VerticalOptions="Center"
+                        Margin="20"
+                     />
+
+                    <Label 
+                        Padding="20"
+                        Text="JUGAR BASQUETBOL"
+                        HorizontalOptions="Start"
+                        VerticalOptions="Center"
+                        FontSize="Medium"
+                        FontAttributes="None"
+                        TextColor="White"
+                    /> 
+
+                </HorizontalStackLayout>
+                
+                <HorizontalStackLayout>
+
+                <Image
+                    Source="comer.png"
+                    WidthRequest="80"
+                    HeightRequest="80"
+                    Aspect="AspectFit"
+                    HorizontalOptions="Start"
+                    VerticalOptions="Center"
+                    Margin="20"
+                />
+
+                <Label 
+                        Padding="20"
+                        Text="COMER (LO MEJOR DEL MUNDO)"
+                        HorizontalOptions="Start"
+                        VerticalOptions="Center"
+                        FontSize="Medium"
+                        FontAttributes="None"
+                        TextColor="White"
+                    /> 
+
+                </HorizontalStackLayout>
+               
+               <Label 
+                    Padding="20"
+                    Text="NIVEL"
+                    HorizontalOptions="Start"
+                    VerticalOptions="Center"
+                    FontSize="Large"
+                    FontAttributes="None"
+                    TextColor="White"
+                /> 
+
+        <HorizontalStackLayout>    
+                    <Slider
+                        x:Name="sldPrincipal"
+                        Maximum="100"
+                        Minimum="0"
+                        Value="0"
+                        WidthRequest="900"
+                        ThumbColor="Black"
+                        MinimumTrackColor="Blue"
+                        MaximumTrackColor="Red" 
+                        ValueChanged="OnSldChange"
+                        Margin="40"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                    />
+                    <Label
+                        Text="0"
+                        x:Name="txtSld"
+                        FontSize="Medium"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                    />
+        </HorizontalStackLayout>
+
+        <HorizontalStackLayout>    
+                    <Slider
+                        x:Name="g"
+                        Maximum="100"
+                        Minimum="0"
+                        Value="0"
+                        WidthRequest="900"
+                        ThumbColor="Black"
+                        MinimumTrackColor="Blue"
+                        MaximumTrackColor="Red" 
+                        ValueChanged="a"
+                        Margin="40"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                    />
+                    <Label
+                        Text="0"
+                        x:Name="f"
+                        FontSize="Medium"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                    />
+        </HorizontalStackLayout>
+
+        <HorizontalStackLayout>    
+                    <Slider
+                        x:Name="hg"
+                        Maximum="100"
+                        Minimum="0"
+                        Value="0"
+                        WidthRequest="900"
+                        ThumbColor="Black"
+                        MinimumTrackColor="Blue"
+                        MaximumTrackColor="Red" 
+                        ValueChanged="op"
+                        Margin="40"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                    />
+                    <Label
+                        Text="0"
+                        x:Name="fee"
+                        FontSize="Medium"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                    />
+        </HorizontalStackLayout>
+            </VerticalStackLayout>
+            </Grid>
+            </Frame>
+
+    <HorizontalStackLayout>
+        <Label
+            Text="Ingrese su nombre"
+            Padding="20"
+            HorizontalOptions="Start"
+            VerticalOptions="Center"
+            FontSize="Medium"
+            FontAttributes="None"
+            TextColor="White"
+        />
+        <Entry
+            Placeholder="Ingresa tu nombre completo"  
+            TextColor="Black"  
+            PlaceholderColor="Gray" 
+            FontSize="Medium" 
+            WidthRequest="600"  
+            Margin="10" 
+            HorizontalOptions="Center"
+            VerticalOptions="Center"
+        />
+
+    </HorizontalStackLayout>
+           
+</VerticalStackLayout>
+            
+    </ScrollView>
+</ContentPage>
+
+
+
+
+<ContentPage Title="Nivel" IconImageSource="logo2.png">
+   <ScrollView>
+        <VerticalStackLayout>
+        <Frame 
+            BorderColor="black"
+            Padding="10"  
+            Margin="10"
+            >
+            <Grid BackgroundColor="#ec6a10">
+
+
+            <VerticalStackLayout>
+
+                <HorizontalStackLayout>
+
+                    <Label 
+                    Text="HOBBIE"
+                    HorizontalOptions="Start"
+                    VerticalOptions="Center"
+                    FontSize="Header"
+                    FontAttributes="Bold"
+                    TextColor="White"
+                    Grid.Row="0"
+                    Grid.Column="2" 
+                    Margin="20"
+                /> 
+
+                <StackLayout Padding="20">
+                    <Label Text="Estado del Switch:" />
+                    <Switch x:Name="miSwitch" Toggled="OnSwitchToggled" />
+                    <Label x:Name="estadoLabel" Text="Apagado" />
+                </StackLayout>
+    
+
+
+
+                </HorizontalStackLayout>
+                
+
+                <BoxView
+                    HeightRequest="4"
+                    Color="Black"
+                    HorizontalOptions="Start"
+                    VerticalOptions="Start"
+                    WidthRequest="200"
+                    Margin="20"
+                />
+
+        
+
+                <HorizontalStackLayout>
+
+                    <Image
+                        Source="nadar.png"
+                        WidthRequest="80"
+                        HeightRequest="80"
+                        Aspect="AspectFit"
+                        HorizontalOptions="Start"
+                        VerticalOptions="Center"
+                        Margin="20"
+                    />
+
+                    <Label 
+                        Padding="20"
+                        Text="HOBBIE 1"
+                        HorizontalOptions="Start"
+                        VerticalOptions="Center"
+                        FontSize="Medium"
+                        FontAttributes="None"
+                        TextColor="White"
+                    /> 
+
+                </HorizontalStackLayout>
+
+                
+                <HorizontalStackLayout>
+                    <Image
+                        Source="basquet.png"
+                        WidthRequest="80"
+                        HeightRequest="80"
+                        Aspect="AspectFit"
+                        HorizontalOptions="Start"
+                        VerticalOptions="Center"
+                        Margin="20"
+                     />
+
+                    <Label 
+                        Padding="20"
+                        Text="HOBBIE 2"
+                        HorizontalOptions="Start"
+                        VerticalOptions="Center"
+                        FontSize="Medium"
+                        FontAttributes="None"
+                        TextColor="White"
+                    /> 
+
+                </HorizontalStackLayout>
+                
+                <HorizontalStackLayout>
+
+                <Image
+                    Source="comer.png"
+                    WidthRequest="80"
+                    HeightRequest="80"
+                    Aspect="AspectFit"
+                    HorizontalOptions="Start"
+                    VerticalOptions="Center"
+                    Margin="20"
+                />
+
+                <Label 
+                        Padding="20"
+                        Text="HOBBIE 3"
+                        HorizontalOptions="Start"
+                        VerticalOptions="Center"
+                        FontSize="Medium"
+                        FontAttributes="None"
+                        TextColor="White"
+                    /> 
+
+                </HorizontalStackLayout>
+               
+               <Label 
+                    Padding="20"
+                    Text="NIVEL"
+                    HorizontalOptions="Start"
+                    VerticalOptions="Center"
+                    FontSize="Large"
+                    FontAttributes="None"
+                    TextColor="White"
+                /> 
+
+       
+            </VerticalStackLayout>
+            </Grid>
+            </Frame>
+           
+</VerticalStackLayout>
+            
+    </ScrollView>
+    </ContentPage>
+
+</TabbedPage>

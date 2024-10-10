@@ -1,0 +1,83 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TDMPW_2P_PR01.Personaje1Page"
+             Title="Personaje1Page">
+
+    <ContentPage.Content>
+        <Frame 
+            CornerRadius="30"
+            BorderColor="DarkBlue"
+            HasShadow="True"
+            Padding="20"
+            Margin="20"
+            BackgroundColor="LightPink"
+            >
+
+            <Grid>
+                <!-- Define the Rows and Columns -->
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*" />
+                    <ColumnDefinition Width="3*" />
+                </Grid.ColumnDefinitions>
+
+                <!-- Circular Image -->
+                <Image
+                    Source="rosa.png"
+                    WidthRequest="200"
+                    HeightRequest="200"
+                    Aspect="AspectFit"
+                    Grid.Row="0"
+                    Grid.Column="0"
+                    VerticalOptions="Center">
+                    <Image.Clip>
+                        <EllipseGeometry
+                            Center="100,100"
+                            RadiusX="100"
+                            RadiusY="100" />
+                    </Image.Clip>
+                </Image>
+
+                <!-- Name of the Character -->
+                <Label
+                    Text="MILLI"
+                    FontSize="Large"
+                    FontAttributes="Bold"
+                    HorizontalOptions="Start"
+                    VerticalOptions="Center"
+                    TextColor="Black"
+                    Grid.Row="0"
+                    Grid.Column="1" />
+
+                <!-- Line under the name -->
+                <BoxView
+                    HeightRequest="2"
+                    Color="Black"
+                    HorizontalOptions="Start"
+                    VerticalOptions="Start"
+                    WidthRequest="100"
+                    Grid.Row="1"
+                    Grid.Column="1" />
+
+                <!-- Character Biography -->
+                <Label
+                    Text="Milli es un personaje de la serie Team Umizoomi. Es una niña con habilidades matemáticas mágicas y es conocida por su capacidad para cambiar patrones y formas. Milli usa su vestido de patrones para resolver problemas relacionados con patrones y tiene un gran sentido del ritmo y la creatividad. Es valiente, ingeniosa, y siempre está dispuesta a ayudar a los demás junto a su hermano Geo y su amigo Bot."
+                    FontSize="Medium"
+                    HorizontalOptions="Start"
+                    VerticalOptions="Start"
+                    TextColor="Black"
+                    Grid.Row="2"
+                    Grid.Column="0"
+                    Grid.ColumnSpan="2" />
+            </Grid>
+
+        </Frame>
+    
+    </ContentPage.Content>
+    
+</ContentPage>

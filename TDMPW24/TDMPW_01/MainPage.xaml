@@ -1,0 +1,201 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TDMPW_01.MainPage">
+
+    <ScrollView>
+
+<!--
+
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+            
+
+            <HorizontalStackLayout
+                HorizontalOptions ="Center"
+                VerticalOptions = "Center"
+            >
+               
+
+                <Image
+                    Source="lente_god.png"
+                    HeightRequest ="50"
+                    Aspect="AspectFill"
+                />
+                <Label
+                    Text="Calculadora"
+                    FontSize ="Large"
+                    TextColor ="Aqua"
+                />
+
+            </HorizontalStackLayout>
+
+            
+
+            <Button
+                x:Name="CounterBtn"
+                Text="Ignorame" 
+                SemanticProperties.Hint="Counts the number of times you click"
+                Clicked="OnCounterClicked"
+                HorizontalOptions="Fill" />
+
+            
+            <VerticalStackLayout
+            
+            HorizontalOptions="Center">
+                <Entry Keyboard="Numeric"
+                    Placeholder="Ingrese  un numero"
+                    WidthRequest="200"
+                    HorizontalOptions ="Center"
+                    Margin ="10" 
+                    x:Name="txN1"
+
+                />
+                <Entry Keyboard="Numeric"
+                    Placeholder="Ingrese otro numero"
+                    WidthRequest="200"
+                    HorizontalOptions ="Center"
+                    Margin ="10" 
+                    x:Name="txN2"
+                />
+
+            </VerticalStackLayout>
+
+
+            <HorizontalStackLayout
+            HorizontalOptions="Center"
+            >
+                <Button
+                    Text="Suma"  
+                    Clicked="calcularSuma"
+                    BackgroundColor =" Red"
+                    Margin ="2"
+                />
+                <Button
+                    Text="Resta"  
+                    Clicked="calcularResta"
+                    BackgroundColor =" Green"
+                    Margin ="2"
+                />
+                 <Button
+                    Text="Multiplicacion"  
+                    Clicked="calcularMulti"
+                    BackgroundColor ="Blue"
+                    Margin ="2"
+                />
+                <Button
+                    Text="Division"  
+                    Clicked="calcularDivi"
+                    BackgroundColor =" Yellow"
+                    Margin ="2"
+                />
+            </HorizontalStackLayout>
+
+            <VerticalStackLayout 
+            Margin="4">
+            
+                <Label
+                    Text=""
+                    FontSize ="Large"
+                    TextColor ="Aqua"
+                    HorizontalOptions ="Center"
+                    x:Name="txresultadoSuma"
+                />
+                <Label
+                    Text=""
+                    FontSize ="Large"
+                    TextColor ="Aqua"
+                    HorizontalOptions ="Center"
+                    x:Name="txresultadoResta"
+                />
+
+                      <Label
+                    Text=""
+                    FontSize ="Large"
+                    TextColor ="Aqua"
+                    HorizontalOptions ="Center"
+                    x:Name="txresultadoMulti"
+                />
+
+            </VerticalStackLayout>
+
+        <Button
+            Text="Ir a Nuevo"
+            Clicked="irNuevo"
+        />
+
+        </VerticalStackLayout>
+
+    -->
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+        
+        
+            <HorizontalStackLayout
+                HorizontalOptions ="Center"
+                VerticalOptions = "Center"
+            >
+
+                <Image
+                    Source="termometro_inicio.png"
+                    WidthRequest="100"
+                    HeightRequest="300"
+                    Aspect="AspectFill"
+                />
+
+                <Label 
+                    Text="Calculadora de grados Celsius"
+                    VerticalOptions="Center" 
+                    HorizontalOptions="Center"
+                    FontSize ="30"
+                />
+
+
+
+            </HorizontalStackLayout>
+
+        <VerticalStackLayout>
+        
+            <Label 
+                    Text="Conversion a:"
+                    VerticalOptions="Center" 
+                    HorizontalOptions="Center"
+                    FontSize ="20"
+            />
+        </VerticalStackLayout>
+
+        <HorizontalStackLayout
+             HorizontalOptions ="Center"
+            VerticalOptions = "Center"
+        >
+            <Button
+                    Text="Fahrenheit"  
+                    Clicked="IrFar"
+                    BackgroundColor ="Green"
+                    Margin ="2"
+                    BorderWidth ="15"
+                    BorderColor ="Green"
+                />
+
+                <Button
+                    Text="Kelvin"  
+                    Clicked="IrKel"
+                    BackgroundColor ="Orange"
+                    Margin ="2"
+                    BorderWidth ="15"
+                    BorderColor ="Orange"
+                />
+        </HorizontalStackLayout>
+        
+        
+        </VerticalStackLayout>  
+           
+
+
+
+
+    </ScrollView>
+
+</ContentPage>

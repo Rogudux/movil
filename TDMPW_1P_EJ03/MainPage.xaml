@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TDMPW_1P_EJ03.MainPage">
+             
+
+ <ContentPage Title="Inicio" IconImageSource="home.png">
+       <ScrollView>
+       
+         <VerticalStackLayout>
+            <Label 
+                Text="TE DAMOS LA BIENVENIDA"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                FontSize="Large"
+                FontAttributes="Bold"
+            />
+            <Image
+                Source="dotnet_bot.png"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                HeightRequest="200"
+                WidthRequest="200"
+            />
+            <Label
+                Text="Pantalla de inicio"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                Margin="30"
+            />
+        </VerticalStackLayout>
+       </ScrollView>
+</ContentPage>
+
+        <ContentPage Title="Configuracion" IconImageSource="set.png">
+            <ScrollView>
+                <VerticalStackLayout>
+            <Label 
+                Text="Pantalla de ajustes"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                FontSize="Large"
+                FontAttributes="Bold"
+            />
+            <Image
+                Source="dotnet_bot.png"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                HeightRequest="200"
+                WidthRequest="200"
+            />
+        </VerticalStackLayout>
+            </ScrollView>
+        </ContentPage>
+
+    <ContentPage Title="Destacadas" IconImageSource="star.png">
+        <ScrollView>
+            <VerticalStackLayout>
+            <Label 
+                Text="Destacadas"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                FontSize="Large"
+                FontAttributes="Bold"
+            />
+            <Image
+                Source="dotnet_bot.png"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                HeightRequest="200"
+                WidthRequest="200"
+            />
+        </VerticalStackLayout>
+        </ScrollView>
+    </ContentPage>
+
+</TabbedPage>

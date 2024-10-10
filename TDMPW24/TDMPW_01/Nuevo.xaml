@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TDMPW_01.Nuevo"
+             Title="Nuevo">
+    <VerticalStackLayout>
+        <Image
+            Source="lente_god.png"
+            WidthRequest="120"
+            HeightRequest="80"
+            HorizontalOptions="Center"
+            VerticalOptions="Center"
+            Aspect="AspectFill "
+        />
+        <Label 
+            Text="TDMPW|La salle bajio"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"/>
+    </VerticalStackLayout>
+</ContentPage>

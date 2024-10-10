@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            x:Class="TDMPW_2P_PR01.Menu"
+            xmlns:local="clr-namespace:TDMPW_2P_PR01"
+            Title="Menu">
+
+    <TabbedPage.Children>
+        <local:MainPage Title="Inicio" IconImageSource="home.png"/>
+        <local:Personaje1Page Title="Personaje 1" IconImageSource="personaje1.png"/>
+        <local:Personaje2Page Title="Personaje 2" IconImageSource="personaje2.png" />
+    </TabbedPage.Children>
+
+</TabbedPage>

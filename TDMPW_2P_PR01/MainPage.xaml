@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TDMPW_2P_PR01.MainPage">
+
+    <ScrollView>
+            <VerticalStackLayout>
+
+                <Frame 
+                    CornerRadius="15"
+                    BorderColor="LightGray"
+                    HasShadow="True"
+                    Padding="10"
+                    Margin="10"
+                    BackgroundColor="LightGreen"
+                >
+
+                <StackLayout 
+                    Spacing="2"
+                >
+
+                <Image
+                    Source="inicio.png"
+                    WidthRequest="300"
+                    HeightRequest="300"
+                    Aspect="AspectFit">
+                    <Image.Clip>
+                        <EllipseGeometry
+                            Center="100,100"
+                            RadiusX="100"
+                            RadiusY="100" />
+                    </Image.Clip>
+                </Image>
+                    
+                    <Label
+                        Text='Equipo Umizoomi'
+                        FontSize="Large"
+                        FontAttributes="Bold"
+                        HorizontalOptions="Start"
+                        VerticalOptions="Start"
+                        TextColor="Black"
+                    />
+
+                    <BoxView
+                        Color="Black"
+                        HeightRequest="1"
+                    />
+
+                    <Label
+                        Text="Team Umizoomi es una serie animada infantil que se centra en las aventuras de tres personajes pequeños con habilidades matemáticas: Milli, Geo y Bot. El equipo usa sus poderes de matemáticas para resolver problemas y ayudar a los niños de Umi City. Cada episodio enseña conceptos básicos de matemáticas como contar, formas, patrones y medir, utilizando canciones y desafíos interactivos para involucrar a los jóvenes espectadores. La serie está diseñada para fomentar habilidades matemáticas tempranas y la confianza en el aprendizaje."
+                        FontSize="Small"
+                        HorizontalOptions="Center"
+                        TextColor="Black"
+                    />
+            </StackLayout>
+            
+        </Frame>
+
+    </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

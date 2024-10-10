@@ -1,0 +1,378 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TDMPW_1P_PR03.MainPage">
+
+    <ContentPage Title="Inicio" IconImageSource="home.png">
+        <ScrollView>
+            <Grid BackgroundColor="White">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+
+                <Label 
+                        Text="CONVERSIÓN DE MONEDA"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        FontSize="Header"
+                        FontAttributes="Bold"
+                        Grid.Column="0"
+                        Grid.Row="0"
+                        Grid.ColumnSpan="3"
+                        TextColor="Black"
+                    />
+
+                    <!-- <BoxView
+                        Grid.Column="0"
+                        Grid.Row="1"
+                        Grid.ColumnSpan="3"
+                        Background="#0D81AB">
+                    </BoxView> -->
+                
+                    <Label
+                        Text="TE DAMOS LA BIENVENIDA"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        FontSize="Large"    
+                        Grid.Column="0"
+                        Grid.Row="1"
+                        Grid.ColumnSpan="3"
+                        TextColor="Black"
+                    />
+
+                    <Image
+                        Source="conversiones.png"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        Grid.Column="0"
+                        Grid.Row="2"
+                        Grid.RowSpan="2"
+                        Grid.ColumnSpan="3"
+                        HeightRequest="400"
+                        WidthRequest="400"
+                    />
+            </Grid>       
+        </ScrollView>                 
+    </ContentPage>
+
+
+    <ContentPage Title="Dolar" IconImageSource="dolar.png">
+        <ScrollView>
+            <Grid BackgroundColor="White">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <BoxView
+                    Grid.Column="0"
+                    Grid.Row="0"
+                    Grid.ColumnSpan="3"
+                    Background="#0D81AB">
+                </BoxView>
+
+                    <Label 
+                        Text="DOLAR"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        FontSize="Header"
+                        FontAttributes="Bold"
+                        Grid.Column="0"
+                        Grid.Row="0"
+                        Grid.ColumnSpan="3"
+                        TextColor="White"
+                    />
+                
+                    <Label
+                        Text="Ingrese la cantidad en pesos"
+                        HorizontalOptions="Center"
+                        VerticalOptions="End"
+                        FontSize="Large"    
+                        Grid.Column="1"
+                        Grid.Row="1"
+                        Grid.ColumnSpan="2"
+                        TextColor="Black"
+                    />
+
+                    <Entry
+                        x:Name="montoEntry"
+                        Placeholder="Ingresa la cantidad"
+                        PlaceholderColor="White"
+                        Grid.Column="1"
+                        Grid.Row="2"
+                        Grid.ColumnSpan="2"
+                        Background="#0D81AB"
+                        WidthRequest="400"
+                        HeightRequest="20"
+                    />
+
+                    <Image
+                        Source="dolarlogo.png"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        Grid.Column="0"
+                        Grid.Row="1"
+                        Grid.RowSpan="2"
+                        HeightRequest="400"
+                        WidthRequest="400"
+                    />
+
+                    <Button
+                        Text="CONVERTIR"
+                        Background="#0D81AB"
+                        Grid.Column="0"
+                        Grid.Row="3"
+                        Grid.ColumnSpan="3"
+                        WidthRequest="800"
+                        HeightRequest="30"
+                        FontAttributes="Bold"
+                        TextColor="White"
+                        Clicked="conveDolar"
+
+                    />
+
+                    <Label
+                        x:Name="resultadoDolar"
+                        Text=""
+                        HorizontalOptions="Center"
+                        VerticalOptions="Start"
+                        FontSize="Medium"    
+                        Grid.Column="0"
+                        Grid.Row="4"
+                        Grid.ColumnSpan="3"
+                        TextColor="Black"
+                    />
+            </Grid>       
+        </ScrollView>                 
+    </ContentPage>
+
+
+        <ContentPage Title="Euro" IconImageSource="euro.png">
+        <ScrollView>
+            <Grid BackgroundColor="White">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <BoxView
+                    Grid.Column="0"
+                    Grid.Row="0"
+                    Grid.ColumnSpan="3"
+                    Background="#ff2d00">
+                </BoxView>
+
+                    <Label 
+                        Text="EURO"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        FontSize="Header"
+                        FontAttributes="Bold"
+                        Grid.Column="0"
+                        Grid.Row="0"
+                        Grid.ColumnSpan="3"
+                        TextColor="White"
+                    />
+                
+                    <Label
+                        Text="Ingrese la cantidad en pesos"
+                        HorizontalOptions="Center"
+                        VerticalOptions="End"
+                        FontSize="Large"    
+                        Grid.Column="1"
+                        Grid.Row="1"
+                        Grid.ColumnSpan="2"
+                        TextColor="Black"
+                    />
+
+                    <Entry
+                        x:Name="montoeuEntry"
+                        Placeholder="Ingresa la cantidad"
+                        PlaceholderColor="White"
+                        Grid.Column="1"
+                        Grid.Row="2"
+                        Grid.ColumnSpan="2"
+                        Background="#ff2d00"
+                        WidthRequest="400"
+                        HeightRequest="20"
+                    />
+
+                    <Image
+                        Source="eurologo.png"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        Grid.Column="0"
+                        Grid.Row="1"
+                        Grid.RowSpan="2"
+                        HeightRequest="300"
+                        WidthRequest="300"
+                    />
+
+                    <Button
+                        Text="CONVERTIR"
+                        Background="#ff2d00"
+                        Grid.Column="0"
+                        Grid.Row="3"
+                        Grid.ColumnSpan="3"
+                        WidthRequest="800"
+                        HeightRequest="30"
+                        FontAttributes="Bold"
+                        TextColor="White"
+                        Clicked="conveEuro"
+
+                    />
+
+                    <Label
+                        x:Name="resultadoEuro"
+                        Text=""
+                        HorizontalOptions="Center"
+                        VerticalOptions="Start"
+                        FontSize="Medium"    
+                        Grid.Column="0"
+                        Grid.Row="4"
+                        Grid.ColumnSpan="3"
+                        TextColor="Black"
+                    />
+            </Grid>       
+        </ScrollView>                 
+    </ContentPage>
+
+
+    <ContentPage Title="Libra" IconImageSource="libra.png">
+    <ScrollView>
+        <Grid BackgroundColor="White">
+
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <BoxView
+                Grid.Column="0"
+                Grid.Row="0"
+                Grid.ColumnSpan="3"
+                Background="#f5b012">
+            </BoxView>
+
+                <Label 
+                    Text="LIBRA"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"
+                    FontSize="Header"
+                    FontAttributes="Bold"
+                    Grid.Column="0"
+                    Grid.Row="0"
+                    Grid.ColumnSpan="3"
+                    TextColor="White"
+                />
+            
+                <Label
+                    Text="Ingrese la cantidad en pesos"
+                    HorizontalOptions="Center"
+                    VerticalOptions="End"
+                    FontSize="Large"    
+                    Grid.Column="1"
+                    Grid.Row="1"
+                    Grid.ColumnSpan="2"
+                    TextColor="Black"
+                />
+
+                <Entry
+                    x:Name="montoliEntry"
+                    Placeholder="Ingresa la cantidad"
+                    PlaceholderColor="White"
+                    Grid.Column="1"
+                    Grid.Row="2"
+                    Grid.ColumnSpan="2"
+                    Background="#f5b012"
+                    WidthRequest="400"
+                    HeightRequest="20"
+                />
+
+                <Image
+                    Source="libralogo.png"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"
+                    Grid.Column="0"
+                    Grid.Row="1"
+                    Grid.RowSpan="2"
+                    HeightRequest="350"
+                    WidthRequest="300"
+                />
+
+                <Button
+                    Text="CONVERTIR"
+                    Background="#f5b012"
+                    Grid.Column="0"
+                    Grid.Row="3"
+                    Grid.ColumnSpan="3"
+                    WidthRequest="800"
+                    HeightRequest="30"
+                    FontAttributes="Bold"
+                    TextColor="White"
+                    Clicked="conveLibra"
+
+                />
+
+                <Label
+                    x:Name="resultadoLibra"
+                    Text=""
+                    HorizontalOptions="Center"
+                    VerticalOptions="Start"
+                    FontSize="Medium"    
+                    Grid.Column="0"
+                    Grid.Row="4"
+                    Grid.ColumnSpan="3"
+                    TextColor="Black"
+                />
+        </Grid>       
+    </ScrollView>                 
+</ContentPage>
+
+
+
+</TabbedPage>
