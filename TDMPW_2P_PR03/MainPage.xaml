@@ -1,48 +1,171 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="TDMPW_2P_PR03.MainPage">
+             x:Class="TDMPW_2P_PR03.MainPage"
+             BackgroundColor="White">
 
     <ScrollView>
-        <VerticalStackLayout
-            Padding="30,0"
-            Spacing="25">
-            
-            <Grid BackgroundColor="White">
+        <VerticalStackLayout Margin="0">
 
-                <Grid.RowDefinitions>
-                    <RowDefinition/>
-                    <RowDefinition/>
-                    <RowDefinition/>
-                    <RowDefinition/>
-                    <RowDefinition/>
-                </Grid.RowDefinitions>
+            <Grid>
+                <Frame 
+                    HorizontalOptions="Center"
+                    WidthRequest="650" 
+                    HeightRequest="100"
+                    CornerRadius="10"
+                    BorderColor="Transparent"
+                    BackgroundColor="White">
 
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                </Grid.ColumnDefinitions>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition /> 
+                        </Grid.RowDefinitions>
 
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition /> 
+                            <ColumnDefinition />   
+                            <ColumnDefinition />  
+                        </Grid.ColumnDefinitions>
 
-                <Slider
-                    Minimum="0"
-                    Maximum="10"
-                    Value="0"
-                    BackgroundColor ="Green"
-                    ThumbColor="Beige"
-                    MaximumTrackColor="Purple"
-                    MinimumTrackColor="Grey"
-                    ValueChanged="OnSldRotate"
-                />
+                        <Label
+                            Text="10"
+                            FontSize="Large"
+                            TextColor="Black"
+                            Grid.Row="0" Grid.Column="0"
+                            VerticalOptions="Center"
+                            HorizontalOptions="Center"
+                            x:Name="valorslider1"
+                        />
 
+                        <Label
+                            Text="30"
+                            FontSize="Large"
+                            TextColor="Black"
+                            VerticalOptions="Center"
+                            Grid.Row="0" Grid.Column="1"
+                            HorizontalOptions="Center"
+                            x:Name="valorslider2"
+                        />
 
-
-
+                        <Label
+                            Text="50"
+                            FontSize="Large"
+                            VerticalOptions="Center"
+                            TextColor="Black"
+                            Grid.Row="0" Grid.Column="2"
+                            HorizontalOptions="Center"
+                            x:Name="valorslider3"
+                        />
+                    </Grid>
+                </Frame>
             </Grid>
 
+            <Grid>
+                <Frame HorizontalOptions="Center"
+                    VerticalOptions="Center"
+                    WidthRequest="650" 
+                    HeightRequest="250"
+                    CornerRadius="10"
+                    BorderColor="#FFE20BE2"
+                    BackgroundColor="White">
 
+                    <HorizontalStackLayout 
+                            VerticalOptions="Center"
+                            HorizontalOptions="Center"
+                    >
+                        <Slider
+                            x:Name="slider1"
+                            Minimum="0"
+                            Maximum="10"
+                            Value="0"
+                            WidthRequest="200"
+                            ThumbColor="Black"
+                            MaximumTrackColor="Black"
+                            MinimumTrackColor="#FFE20BE2"
+                            Rotation="270"
+                            ValueChanged="OnSliderValueChanged"
+                        />
+
+                        <Slider
+                            x:Name="slider2"
+                            Minimum="0"
+                            Maximum="30"
+                            Value="0"
+                            WidthRequest="200"
+                            ThumbColor="Black"
+                            MaximumTrackColor="Black"
+                            MinimumTrackColor="#FFE20BE2"
+                            Rotation="270"
+                            IsVisible="False" 
+                        /> 
+                        
+                        <Slider
+                            x:Name="slider3"
+                            Minimum="0"
+                            Maximum="50"
+                            Value="0"
+                            WidthRequest="200"
+                            ThumbColor="Black"
+                            MaximumTrackColor="Black"
+                            MinimumTrackColor="#FFE20BE2"
+                            Rotation="270"
+                            IsVisible="False" 
+                        />
+                    </HorizontalStackLayout>
+                </Frame>
+            </Grid>
+
+            <Grid>
+                <Frame HorizontalOptions="Center"
+                    VerticalOptions="Center"
+                    WidthRequest="220" 
+                    HeightRequest="300"
+                    CornerRadius="10"
+                    BorderColor="Transparent"
+                    BackgroundColor="White">
+
+                    <VerticalStackLayout>
+                        <HorizontalStackLayout 
+                            VerticalOptions="Center"
+                            HorizontalOptions="Center"
+                        >
+                            <Button
+    Text="+" 
+    FontSize="Medium"
+    Padding="10"
+    BackgroundColor="#FFE20BE2"
+    Margin="4"
+    WidthRequest="80"
+    FontAttributes="Bold"
+    x:Name="boton1"
+    Clicked="OnButtonClicked"
+    IsEnabled="True" 
+/>
+
+<Button
+    Text="+" 
+    FontSize="Medium"
+    BackgroundColor="#FFE20BE2"
+    Margin="4"
+    WidthRequest="80"
+    FontAttributes="Bold"
+    x:Name="boton2"
+    Clicked="OnButtonClicked"
+    IsEnabled="False" 
+/>
+                        </HorizontalStackLayout>
+                          <Label
+                                Text=""
+                                FontSize="Medium"
+                                VerticalOptions="Center"
+                                TextColor="Black"
+                                HorizontalOptions="Center"
+                                x:Name="felicidades"
+                                FontFamily="Comic Sans MS"
+                            />
+                    </VerticalStackLayout>
+                </Frame>
+            </Grid>
         </VerticalStackLayout>
     </ScrollView>
-
 </ContentPage>
